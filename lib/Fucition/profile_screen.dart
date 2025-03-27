@@ -28,6 +28,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (_)=>LoginScreen()));
                 }, child: Text("Đăng Xuất")),
+            ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.blue, foregroundColor: Colors.white),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (_)=>LoginScreen()));
+                }, child: Text("Đổi thông tin cá nhân")),
+            ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.green, foregroundColor: Colors.white),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (_)=>LoginScreen()));
+                }, child: Text("No one")),
 
           ],
         ),
