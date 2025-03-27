@@ -22,7 +22,7 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     CartShopping(),
-    Center(child: Text("🚚 Vận chuyển", style: TextStyle(fontSize: 24))),
+    Center(child: Text("Vận chuyển", style: TextStyle(fontSize: 24))),
     ProfileScreen(),
   ];
 
