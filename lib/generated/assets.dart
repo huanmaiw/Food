@@ -2,8 +2,11 @@
 class Assets {
   Assets._();
 
+  static const String accountFirebaseAuthen = 'lib/Account/firebase_authen.dart';
   static const String accountLoginScreen = 'lib/Account/login_screen.dart';
+  static const String accountOtpScreen = 'lib/Account/otp_screen.dart';
   static const String accountRegisterScreen = 'lib/Account/register_screen.dart';
+  static const String foodImagesBdct = 'images/bdct.jpg';
   static const String foodImagesSlap = 'images/slap.webp';
   static const String fucitionCartShopping = 'lib/Fucition/cart_shopping.dart';
   static const String fucitionFindWidget = 'lib/Fucition/find_widget.dart';
@@ -16,6 +19,7 @@ class Assets {
   static const String homeMainScreen = 'lib/Home/main_screen.dart';
   static const String imagesBdct = 'images/bdct.jpg';
   static const String imagesSlap = 'images/slap.webp';
+  static const String libFirebaseOptions = 'lib/firebase_options.dart';
   static const String libMain = 'lib/main.dart';
   static const String sliderSl1 = 'images/Slider/sl1.jpg';
   static const String sliderSl2 = 'images/Slider/sl2.jpg';
