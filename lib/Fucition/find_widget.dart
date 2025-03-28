@@ -12,23 +12,37 @@ class _FindWidgetState extends State<FindWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: TextFormField(
-          decoration: InputDecoration(
-            hintText: "Tìm kiếm",
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
+        backgroundColor: Colors.white,
+        elevation: 2,
+        title: Container(
+          decoration: BoxDecoration(
+            color: Colors.grey.shade200,
+            borderRadius: BorderRadius.circular(30),
+          ),
+          child: TextFormField(
+            decoration: InputDecoration(
+              hintText: "Tìm kiếm...",
+              hintStyle: TextStyle(color: Colors.grey.shade600),
+              border: InputBorder.none,
+              contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              suffixIcon: Icon(Icons.search, color: Colors.blueAccent),
+            ),
           ),
         ),
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.search),
+            icon: Icon(Icons.notifications, color: Colors.blueAccent),
           ),
-          IconButton(
-            icon: Icon(Icons.notifications),
-            onPressed: () {},
-          ),
+          SizedBox(width: 10),
         ],
+      ),
+      body: Center(
+        child: Text(
+          'Tìm kiếm sản phẩm hoặc dịch vụ',
+          style: TextStyle(fontSize: 18, color: Colors.grey.shade600),
+        ),
       ),
     );
   }

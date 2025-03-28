@@ -22,8 +22,6 @@ class _SuggestedDishesState extends State<SuggestedDishes> {
             ),
           ),
           SizedBox(height: 10),
-
-          // Lưới món ăn
           GridView.builder(
             itemCount: 6,
             shrinkWrap: true,
@@ -41,9 +39,12 @@ class _SuggestedDishesState extends State<SuggestedDishes> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset(
-                        "images/Suggest/dish${index + 1}.jpg",
-                        fit: BoxFit.cover,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset(
+                          "images/Suggest/dish${index + 1}.jpg",
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                     SizedBox(height: 5),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food/Fucition/transport.dart';
 import '../Fucition/cart_shopping.dart';
 import '../Fucition/profile_screen.dart';
 import 'home_screen.dart';
@@ -11,47 +12,67 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 0;
-
-  void indexChange(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
-  final List<Widget> _widgetOptions = <Widget>[
+  int currentIndex =0;
+  final List<Widget> screens=[
     HomeScreen(),
     CartShopping(),
-    Center(child: Text("Vận chuyển", style: TextStyle(fontSize: 24))),
+    Transport(),
     ProfileScreen(),
   ];
-
+  void _onSeclected(int index){
+    setState(() {
+      currentIndex = index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              child: _widgetOptions[_selectedIndex],
-            ),
-          ],
-        ),
-      ),
+        body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
-        currentIndex: _selectedIndex,
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
-        onTap: indexChange,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Trang chủ"),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: "Giỏ hàng"),
-          BottomNavigationBarItem(icon: Icon(Icons.delivery_dining), label: "Vận chuyển"),
-          BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: "Tài khoản"),
+        selectedFontSize: 14,
+        unselectedFontSize: 12,
+        iconSize: 30,
+        elevation: 5,
+        onTap: _onSeclected,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home,
+                color: currentIndex == 0 ? Colors.blue : Colors.grey),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart,
+                color: currentIndex == 1 ? Colors.blue : Colors.grey),
+            label: "Giỏ hàng",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.local_shipping,
+                color: currentIndex == 2 ? Colors.blue : Colors.grey),
+            label: "Đơn hàng",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person,
+                color: currentIndex == 3 ? Colors.blue : Colors.grey),
+            label: "Tài khoản",
+          ),
         ],
+        currentIndex: currentIndex,
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.white,
+          onPressed:(){
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const HomeScreen(),
+              ),
+            );
+          }, child: Icon(Icons.add,color: Colors.blue,),
+           ),
     );
-  }
-}
+  }}

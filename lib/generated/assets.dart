@@ -6,6 +6,10 @@ class Assets {
   static const String accountLoginScreen = 'lib/Account/login_screen.dart';
   static const String accountOtpScreen = 'lib/Account/otp_screen.dart';
   static const String accountRegisterScreen = 'lib/Account/register_screen.dart';
+  static const String blocCountBloc = 'lib/Provider/Bloc/count_bloc.dart';
+  static const String blocEventBloc = 'lib/Provider/Bloc/event_bloc.dart';
+  static const String blocHomeBloc = 'lib/Provider/Bloc/home_bloc.dart';
+  static const String blocStateBloc = 'lib/Provider/Bloc/state_bloc.dart';
   static const String foodImagesBdct = 'images/bdct.jpg';
   static const String foodImagesSlap = 'images/slap.webp';
   static const String fucitionCartShopping = 'lib/Fucition/cart_shopping.dart';
@@ -14,6 +18,7 @@ class Assets {
   static const String fucitionProfileScreen = 'lib/Fucition/profile_screen.dart';
   static const String fucitionSlapsScreen = 'lib/Fucition/slaps_screen.dart';
   static const String fucitionSuggestedDishes = 'lib/Fucition/suggested_dishes.dart';
+  static const String fucitionTransport = 'lib/Fucition/transport.dart';
   static const String generatedAssets = 'lib/generated/assets.dart';
   static const String homeHomeScreen = 'lib/Home/home_screen.dart';
   static const String homeMainScreen = 'lib/Home/main_screen.dart';
@@ -21,6 +26,10 @@ class Assets {
   static const String imagesSlap = 'images/slap.webp';
   static const String libFirebaseOptions = 'lib/firebase_options.dart';
   static const String libMain = 'lib/main.dart';
+  static const String providerGetx = 'lib/Provider/getx.dart';
+  static const String providerHome = 'lib/Provider/home.dart';
+  static const String providerHomex = 'lib/Provider/homex.dart';
+  static const String providerProvider = 'lib/Provider/provider.dart';
   static const String sliderSl1 = 'images/Slider/sl1.jpg';
   static const String sliderSl2 = 'images/Slider/sl2.jpg';
   static const String sliderSl3 = 'images/Slider/sl3.jpg';
