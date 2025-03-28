@@ -39,21 +39,24 @@ class _ImagesSliderState extends State<ImagesSlider> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        SizedBox(
-          height: 220,
-          width: double.infinity,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: PageView.builder(
-                controller: _pageController,
-                scrollDirection: Axis.horizontal,
-                allowImplicitScrolling: true,
-                physics: const ClampingScrollPhysics(),
-                itemCount: 5,
-                itemBuilder: (context,index){
-                  return Image.asset("images/Slider/sl${index+1}.jpg",fit: BoxFit.cover,
-                  );
-                }
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: SizedBox(
+            height: 250,
+            width: double.infinity,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: PageView.builder(
+                  controller: _pageController,
+                  scrollDirection: Axis.horizontal,
+                  allowImplicitScrolling: true,
+                  physics: const ClampingScrollPhysics(),
+                  itemCount: 5,
+                  itemBuilder: (context,index){
+                    return Image.asset("images/Slider/sl${index+1}.jpg",fit: BoxFit.cover,
+                    );
+                  }
+              ),
             ),
           ),
         ),

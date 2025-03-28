@@ -30,7 +30,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: ImagesSlider(),
                     ),
                     SizedBox(height: 10),
-                    SuggestedDishes(),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SuggestedDishes(),
+                    ),
                   ],
                 ),
               ),
