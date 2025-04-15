@@ -1,43 +1,26 @@
 {
   "project_info": {
-    "project_number": "556392695206",
-    "project_id": "maihuan",
-    "storage_bucket": "maihuan.firebasestorage.app"
+    "project_number": "899344793859",
+    "project_id": "fir-1-45e9b",
+    "storage_bucket": "fir-1-45e9b.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:556392695206:android:00e4bc96dc89af6fa17b67",
+        "mobilesdk_app_id": "1:899344793859:android:6d6d4119d467c4344de936",
         "android_client_info": {
           "package_name": "com.example.food"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "556392695206-cmk139hh0sqgcs9bahkuhqv55l5umuvl.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAFBxBXRD0kLMIOCzDQO5xqziYj3xwHK94"
+          "current_key": "AIzaSyAFwQr3K0B5LI6_VF3WlbHEix1iCzyqBRI"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "556392695206-cmk139hh0sqgcs9bahkuhqv55l5umuvl.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "556392695206-b6im28n7qdbg8mgels0t54h587ecctpc.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.foodorder"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

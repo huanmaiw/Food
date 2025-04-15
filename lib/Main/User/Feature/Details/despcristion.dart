@@ -1,0 +1,71 @@
+import 'package:flutter/material.dart';
+
+class Description extends StatefulWidget {
+  final String description;
+  const Description({super.key, required this.description});
+
+  @override
+  State<Description> createState() => _DescriptionState();
+}
+
+class _DescriptionState extends State<Description> {
+  bool isExpanded = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    isExpanded = !isExpanded;
+                  });
+                },
+                child: Row(
+                  children: [
+                    Container(
+                      width: 150,
+                      height: 23,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      alignment: Alignment.center,
+                      child: const Text(
+                        "Thông tin món ăn",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 20),
+          AnimatedContainer(
+            duration: const Duration(milliseconds: 300),
+            height: isExpanded ? null : 50,
+            child: Text(
+              widget.description,
+              style: const TextStyle(
+                  fontSize: 18,
+                  color: Colors.black,fontWeight: FontWeight.bold
+              ),
+              overflow: TextOverflow.ellipsis,
+              maxLines: isExpanded ? null : 3,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
